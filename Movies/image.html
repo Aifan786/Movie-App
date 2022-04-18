@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL</title>
+</head>
+<body>
+    <input type="url" id="url"/>
+    <button onclick="storeImages(event)">Submit URL</button>
+</body>
+</html>
+
+<script>
+
+let images = JSON.parse(localStorage.getItem("Simages"))||[];
+
+    function storeImages(e){
+        
+        event.preventDefault();
+
+        
+        let image = document.getElementById('url').value;
+
+        images.push(image);
+
+        localStorage.setItem("Simages", JSON.stringify(images))
+
+        document.getElementById('url').value = null;
+
+        localStorage.setItem("Simages", JSON.stringify(images))
+
+    }
+
+
+</script>
