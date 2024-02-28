@@ -76,7 +76,9 @@
 
     <button onclick="stop()">Stop Slideshow</button> -->
     <div id="Box">
-        <div id="Images"></div>
+        <div id="Images">
+            <img src = "https://media.istockphoto.com/id/1322787628/photo/empty-cinema-with-blank-white-screen.jpg?s=2048x2048&w=is&k=20&c=GqMBV9BIYEZjN0lfO5gSLly4YO1QrG1A_xmngNHLSYg=">
+        </div>
         <select id="sort" onchange="handleNameSort()">
             <option value="--">Sort</option>
             <option value="lth">Ascending</option>
@@ -90,32 +92,32 @@
 
 <script>
 
-    let image_div = document.getElementById("Images");
+    // let image_div = document.getElementById("Images");
 
-    let i=0;
-    let id;
+    // let i=0;
+    // let id;
 
-    let images_arr = JSON.parse(localStorage.getItem("Simages"))||[];
+    // let images_arr = JSON.parse(localStorage.getItem("Simages"))||[];
 
-    let img = document.createElement("img")
+    // let img = document.createElement("img")
 
-    id = setInterval(function(){
+    // id = setInterval(function(){
 
-    if(i === images_arr.length){
+    // if(i === images_arr.length){
         
-        i = 0;
-    } 
+    //     i = 0;
+    // } 
 
-    image_div.innerHTML = null;
+    // image_div.innerHTML = null;
 
-    img.src = images_arr[i];
+    // img.src = images_arr[i];
 
-    image_div.append(img)
+    // image_div.append(img)
 
-    i++;
+    // i++;
     
-    localStorage.setItem("Simages",JSON.stringify(images_arr))
-    }, 3000);
+    // localStorage.setItem("Simages",JSON.stringify(images_arr))
+    // }, 3000);
 
     // }
 
